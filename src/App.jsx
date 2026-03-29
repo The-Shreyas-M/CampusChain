@@ -56,12 +56,22 @@ const App = () => {
           }
           return { ...u, balances: newBals };
         }
-        if (u.id === data.mid) {
-          // If receiver is a merchant, update their flat balance for backward compatibility
-          if (u.role === 'merchant') return { ...u, balance: (u.balance || 0) + amt };
-          // If receiver is a club or other node, update their specific vault
-          return { ...u, balances: { ...u.balances, [cat]: (u.balances?.[cat] || 0) + amt }};
-        }
+        // Find this part in your App.jsx:
+if (u.id === data.mid) {
+  // FIX: Ensure both styles of balance are updated for Merchants
+  if (u.role === 'merchant') {
+    return { 
+      ...u, 
+      balance: (u.balance || 0) + amt, // Updates the flat balance for your old panel
+      balances: { 
+        ...(u.balances || {}), 
+        [cat]: (u.balances?.[cat] || 0) + amt // Also updates the specific vault
+      }
+    };
+  }
+  // For Clubs and others
+  return { ...u, balances: { ...u.balances, [cat]: (u.balances?.[cat] || 0) + amt }};
+}
         return u;
       }));
       addTx(sender.id, data.mid, amt, cat, 'SUCCESS');
