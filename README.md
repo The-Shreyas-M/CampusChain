@@ -1,16 +1,53 @@
-# React + Vite
+🛡️ CampusChain V2
+Modular | Targeted | Secure
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+CampusChain is a simulated blockchain-based digital currency system designed for university ecosystems. It features a Targeted Token Protocol that ensures specific funds (like Canteen Credits or Club Grants) can only be spent at authorized nodes.
 
-Currently, two official plugins are available:
+🚀 Core Innovations
+Targeted Token System: Multi-vault wallets that separate GENERAL funds from restricted tokens like ANY_MERCHANT or ANY_CLUB.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+Smart Validator Layer: The UI dynamically filters spendable assets based on the recipient's role, preventing "illegal" cross-category spending.
 
-## React Compiler
+Node-Based Architecture: Specialized dashboards for Admins (Minter/Treasury), Students (Users), Merchants (Canteen/Stationary), and Clubs (Events/Fees).
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+Auth-Protocol: Integrated PinPad system for every transaction (Transfer, Bill Pay, or Redemption).
 
-## Expanding the ESLint configuration
+Global Ledger: A real-time, transparent audit trail of all successful and failed transactions.
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+🛠️ Tech Stack
+Frontend: React.js + Vite
+
+Styling: Tailwind CSS (Cyberpunk/Dark Mode Aesthetic)
+
+Icons: Lucide React
+
+Animations: Framer Motion
+
+Persistence: LocalStorage (Simulated Distributed Ledger)
+
+📥 Installation & Setup
+Follow these steps to get the node running locally:
+
+Clone the repository:
+
+Bash
+git clone https://github.com/[YOUR_USERNAME]/CampusChain-V2.git
+cd CampusChain-V2
+Install Dependencies:
+
+Bash
+npm install
+Run Development Server:
+
+Bash
+npm run dev
+Login Credentials (Default):
+
+Admin: UID: admin | PIN: 1234
+
+Student: UID: 23104188 | PIN: 1234
+
+Merchant: UID: M-999 | PIN: 1234
+
+🛡️ Project Status: MVP_READY
+Designed and developed for the 24-hour FinTech Hackathon. This version (v6.5_MODULAR) focuses on solving the problem of fund misappropriation in campus grants.
