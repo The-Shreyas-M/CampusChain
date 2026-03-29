@@ -87,15 +87,55 @@ const App = () => {
       </header>
 
       {!activeUserId ? (
-        <div className="max-w-md mx-auto mt-24 bg-slate-900 border border-slate-800 p-8 rounded-3xl">
-          <Lock className="mx-auto mb-4 text-emerald-500" size={32}/>
-          <input id="login-id" className="w-full bg-black border border-slate-800 p-4 rounded-xl mb-4 outline-none" placeholder="UID" />
-          <button onClick={() => {
-            const u = users.find(x => x.id === document.getElementById('login-id').value);
-            if(u) setAuth({ show: true, targetPin: u.pin, action: { type: 'LOGIN', id: u.id } });
-            else alert("UNKNOWN NODE");
-          }} className="w-full bg-emerald-600 text-black font-bold py-4 rounded-xl">AUTH NODE</button>
+  <div className="max-w-md mx-auto mt-24">
+    <div className="bg-slate-900 border border-slate-800 p-8 rounded-3xl shadow-2xl">
+      <Lock className="mx-auto mb-4 text-emerald-500" size={32}/>
+      
+      <input 
+        id="login-id" 
+        className="w-full bg-black border border-slate-800 p-4 rounded-xl mb-4 outline-none focus:border-emerald-500 text-white transition-all font-mono" 
+        placeholder="ENTER NODE ID" 
+      />
+      
+      <button 
+        onClick={() => {
+          const val = document.getElementById('login-id').value;
+          const u = users.find(x => x.id === val);
+          if(u) setAuth({ show: true, targetPin: u.pin, action: { type: 'LOGIN', id: u.id } });
+          else alert("UNKNOWN NODE ID");
+        }} 
+        className="w-full bg-emerald-600 text-black font-black py-4 rounded-xl hover:bg-emerald-400 transition-all mb-8"
+      >
+        AUTH NODE
+      </button>
+
+      {/* --- TEST CREDENTIALS HINT BOX --- */}
+      <div className="bg-black/50 p-4 rounded-2xl border border-white/5">
+        <p className="text-[10px] text-slate-500 uppercase font-bold mb-3 tracking-widest text-center">Quick Access Nodes</p>
+        
+        <div className="space-y-2">
+          <div className="flex justify-between items-center text-[11px] hover:bg-white/5 p-1 px-2 rounded cursor-pointer group" onClick={() => document.getElementById('login-id').value = 'admin'}>
+            <span className="text-slate-500 uppercase">Admin:</span>
+            <span className="text-emerald-500 font-bold group-hover:underline">admin</span>
+          </div>
+          <div className="flex justify-between items-center text-[11px] hover:bg-white/5 p-1 px-2 rounded cursor-pointer group" onClick={() => document.getElementById('login-id').value = '23104188'}>
+            <span className="text-slate-500 uppercase">Student:</span>
+            <span className="text-emerald-500 font-bold group-hover:underline">23104188</span>
+          </div>
+          <div className="flex justify-between items-center text-[11px] hover:bg-white/5 p-1 px-2 rounded cursor-pointer group" onClick={() => document.getElementById('login-id').value = 'M-999'}>
+            <span className="text-slate-500 uppercase">Merchant:</span>
+            <span className="text-emerald-500 font-bold group-hover:underline">M-999</span>
+          </div>
         </div>
+
+        <div className="mt-4 pt-3 border-t border-white/5 text-center">
+          <p className="text-[9px] text-yellow-500/80 font-bold">
+            🔑 TEST PIN: <span className="text-white bg-white/10 px-2 py-0.5 rounded">1234</span>
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
       ) : (
         <div className="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-12 gap-8">
           <div className="lg:col-span-4 space-y-6">
