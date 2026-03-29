@@ -31,7 +31,7 @@ Follow these steps to get the node running locally:
 
 1.  **Clone the repository:**
     ```bash
-    git clone [https://github.com/](https://github.com/)[YOUR_USERNAME]/CampusChain-V2.git
+    git clone https://github.com/The-Shreyas-M/CampusChain.git
     cd CampusChain-V2
     ```
 
