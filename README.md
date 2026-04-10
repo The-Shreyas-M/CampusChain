@@ -1,6 +1,8 @@
 # 🛡️ CampusChain V2
 **Modular | Targeted | Secure**
 
+[![Watch Demo Video](https://img.shields.io/badge/%E2%96%B6%EF%B8%8F%20Watch%20Demo%20Video-YouTube-red?style=for-the-badge&logo=youtube)](https://youtu.be/KPwfEwtL7zQ)
+
 CampusChain is a simulated blockchain-based digital currency system designed for university ecosystems. It features a **Targeted Token Protocol** that ensures specific funds (like Canteen Credits or Club Grants) can only be spent at authorized nodes, preventing fund misappropriation.
 
 ---
@@ -49,10 +51,6 @@ Follow these steps to get the node running locally:
     * **Admin:** UID: `admin` | PIN: `1234`
     * **Student:** UID: `23104188` | PIN: `1234`
     * **Merchant:** UID: `M-999` | PIN: `1234`
-
-### 🎥 Usage Video
-
-Watch the usage video: https://youtu.be/KPwfEwtL7zQ
 
 ---
 
