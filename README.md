@@ -50,6 +50,10 @@ Follow these steps to get the node running locally:
     * **Student:** UID: `23104188` | PIN: `1234`
     * **Merchant:** UID: `M-999` | PIN: `1234`
 
+### 🎥 Usage Video
+
+Watch the usage video: https://youtu.be/KPwfEwtL7zQ
+
 ---
 
 ### 🛡️ Project Status: **MVP_READY**
